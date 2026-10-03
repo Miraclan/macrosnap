@@ -48,4 +48,4 @@ Keep `secrets.toml` private. Do not upload API keys or the `venv` folder to GitH
 
 ## Current project status
 
-The local app has been opened and the text chat, photo analysis, and summary preview have been tried. Nutrition values are estimates and may vary with portions and ingredients. Public deployment and automatic WhatsApp delivery still need to be completed if they are required for the submission.
+The local app has been opened and the text chat, photo analysis, and summary preview have been tried. Nutrition values are estimates and may vary with portions and ingredients.
