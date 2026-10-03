@@ -1,51 +1,58 @@
 # MacroSnap
 
-MacroSnap is a Streamlit app that uses Gemini to estimate meal calories and macros from a text description or photo.
+MacroSnap is a Streamlit app that uses Google Gemini to estimate calories and macronutrients from a meal description or photo.
 
 ## Features
 
-- Name and WhatsApp number onboarding
-- Gemini chat for meal estimates
-- Meal photo analysis
-- A WhatsApp-friendly nutrition summary preview
+- Enter your name and WhatsApp number
+- Describe a meal and get a nutrition estimate
+- Upload a meal photo for analysis
+- View a WhatsApp-style nutrition summary
 
-**WhatsApp delivery is not enabled in this version.** The summary is shown as a preview. Twilio trial accounts require an approved message template, and the app is not currently connected to one.
+## Requirements
+
+- Python 3.10 or later
+- A Google Gemini API key
 
 ## Run locally
 
-1. Install Python.
-2. Open a terminal in the project folder and create a virtual environment:
+1. Clone or download this repository and open a terminal in its folder.
+2. Create and activate a virtual environment in PowerShell:
 
    ```powershell
    python -m venv venv
-   ```
-
-3. Activate it in PowerShell:
-
-   ```powershell
    .\venv\Scripts\Activate.ps1
    ```
 
-4. Install the packages:
+3. Install the dependencies:
 
    ```powershell
    pip install -r requirements.txt
    ```
 
-5. Create `.streamlit/secrets.toml` with your Gemini API key:
+4. Create `.streamlit/secrets.toml` and add your Gemini API key:
 
    ```toml
-   GEMINI_API_KEY = "paste-your-own-key-here"
+   GEMINI_API_KEY = "your-gemini-api-key"
    ```
 
-6. Start the app:
+5. Start the app:
 
    ```powershell
    streamlit run app.py
    ```
 
-Keep `secrets.toml` private. Do not upload API keys or the `venv` folder to GitHub. The repository's `.gitignore` excludes them.
+## Deploy on Streamlit Community Cloud
 
-## Current project status
+1. Connect your GitHub account to Streamlit Community Cloud.
+2. Select this repository, the `main` branch, and `app.py`.
+3. Add `GEMINI_API_KEY` in the app’s **Secrets** settings.
+4. Deploy the app.
 
-The local app has been opened and the text chat, photo analysis, and summary preview have been tried. Nutrition values are estimates and may vary with portions and ingredients.
+## WhatsApp
+
+This version does not send WhatsApp messages. It displays a WhatsApp-style summary preview.
+
+## Note
+
+Nutrition values are estimates. Actual values depend on portion sizes and ingredients.
